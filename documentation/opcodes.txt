@@ -1,0 +1,19 @@
+Instructions are encoded as a 4-bit opcode then a 12-bit operand, laid out in big-endian
+ 
+0 add n -- add the value of register n to the accumulator
+1 addi n -- add n to the accumulator
+2 and n -- AND the accumulator with the value of register n
+3 or n -- OR the accumulator with the value of register n
+4 xor n -- XOR the accumulator with the value of register n
+5 not -- NOT the accumulator
+6 rot -- rotate the accumulator right by one bit
+7 str n -- store the value of the accumulator to register n
+8 ldr n -- load the value of the accumulator from register n
+9 stm n -- store the value of the accumulator to address n
+A ldm n -- load the value of the accumulator to address n
+B li n -- load n to the accumulator
+C jmp n -- do an unconditional jump to address n
+D jz n -- jump to address n if the accumulator is zero
+E jo n -- jump to address n if the overflow bit is set
+F co -- clear the overflow bit
+
